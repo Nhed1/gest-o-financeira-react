@@ -3,6 +3,8 @@ import {Balance} from './components/Balance.jsx'
 import {History} from './components/History.jsx'
 import {Form} from './components/Form.jsx'
 
+import './app.css'
+
 function App() {
   return (
     <div className="App">
