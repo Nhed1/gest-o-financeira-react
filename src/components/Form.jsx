@@ -8,11 +8,12 @@ export function Form() {
                         <label htmlFor="title">Nome da transação</label>
                         <input type="text" id="title"/>
                     </div>
-                    <div className="amount">
-                        <label htmlFor="title">Quantidade (negativa = gastos | positiva = receita)</label>
-                        <input type="text" id="title"/>
+                    <div className="amount-transaction">
+                        <label htmlFor="amount">Quantidade (negativa = gastos | positiva = receita)</label>
+                        <input type="number" id="amount"/>
                     </div>
                 </form>
+                <input type="submit" id="submit"/>
             </div>
         </div>
     )

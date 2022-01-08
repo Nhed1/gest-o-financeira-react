@@ -1,6 +1,6 @@
 export function Header() {
     return(
-        <div class="balance">
+        <div className="balance">
             <div>
             <h1>Gestão de gastos</h1>
             <h2>Seu saldo: 0.0</h2>
