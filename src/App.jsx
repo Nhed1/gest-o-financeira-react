@@ -1,15 +1,13 @@
 import {Header} from './components/Header.jsx'
-import {Balance} from './components/Balance.jsx'
 import {History} from './components/History.jsx'
 import {Form} from './components/Form.jsx'
 
-import './app.css'
+import './app.scss'
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Balance></Balance>
       <History></History>
       <Form></Form>
     </div>
