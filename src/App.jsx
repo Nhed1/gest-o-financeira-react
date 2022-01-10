@@ -8,18 +8,24 @@ import { useState } from 'react'
 
 function App() {  
   const [dataFromUser, setDataFromUser] = useState({})
+  const [allData, setAllData] = useState([])
 
   const getData = (data) => {
-    setDataFromUser(data)
+    setDataFromUser(() => data)
+
+    setAllData(prevState => [...prevState , data])
+    console.log(dataFromUser)
   } 
   
   return (
     <div>
+
       <Header/>
       <div className="container">
         <Balance/>
         <IncomeExpenses/>
-        <TransactionList/>
+        <TransactionList
+        data={allData}/>
         <AddTransaction
         sendData={getData}/>
       </div>
