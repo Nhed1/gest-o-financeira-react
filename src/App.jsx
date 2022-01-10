@@ -4,18 +4,8 @@ import { Balance } from './components/Balance'
 import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionList } from './components/TransactionList'
 import { AddTransaction } from './components/AddTransaction'
-import React, {useState} from 'react'
 
-function App() {
-  const [title, setTitle] = useState('')
-  const [amount, setAmount] = useState(0)
-
-
-  const titleAmount = (titleChild, amountChild) => {
-    setTitle(titleChild)
-    setAmount(amountChild)
-  }
-
+function App() {  
   return (
     <div>
       <Header/>
@@ -23,8 +13,7 @@ function App() {
         <Balance/>
         <IncomeExpenses/>
         <TransactionList/>
-        <AddTransaction
-        titleAmout={titleAmount}/>
+        <AddTransaction/>
       </div>
     </div>
   );
