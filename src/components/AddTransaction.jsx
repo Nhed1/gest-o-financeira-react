@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
 
-export const AddTransaction = () => {
-    const [title, setTitle] = useState('')
-    const [amount, setAmount] = useState(0)
+export const AddTransaction = (props) => {
+  const [title, setTitle] = useState('')
+  const [amount, setAmount] = useState(0)
+
+    const getTitleAmount = (event) => {
+      props.titleAmount(event.target)
+    }
+
 
     return (
     <>
