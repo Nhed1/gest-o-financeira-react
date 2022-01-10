@@ -4,8 +4,8 @@ export const Balance = (props) => {
     console.log(props.total)
     return (
         <>
-            <h4>Your Balance</h4>
-            <h1>{props.total}</h1>
+            <h4>Seu Saldo</h4>
+            <h1>{`R$${props.total}`}</h1>
         </>
     )
 }

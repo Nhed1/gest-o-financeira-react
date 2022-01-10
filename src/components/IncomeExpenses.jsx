@@ -27,12 +27,12 @@ export const IncomeExpenses = ({data}) => {
     return (        
         <div className="inc-exp-container">
             <div>
-             <h4>Income</h4>
-             <p className="money plus">{income}</p>
+             <h4>Receita</h4>
+             <p className="money plus">{`R$${income}`}</p>
             </div>
         <div>
-          <h4>Expense</h4>
-          <p className="money minus">{expense}</p>
+          <h4>Gastos</h4>
+          <p className="money minus">{`-R$${expense}`}</p>
         </div>
       </div>
     )

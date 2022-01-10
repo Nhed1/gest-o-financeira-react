@@ -3,7 +3,7 @@ import React from 'react'
 export const TransactionList = (props) => {
     return (
         <>
-    <h3>History</h3>
+    <h3>Histórico</h3>
     <ul className="list">
     {props.data.map(eachData => {
         if (eachData.amount >= 0){

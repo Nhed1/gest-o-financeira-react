@@ -1,23 +1,23 @@
 import React, {useState} from 'react'
 
 export const AddTransaction = (props) => {
-    const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('') 
     const [amount, setAmount] = useState(0)
     const [key, setKey] = useState(0)
 
     return (
     <>
-    <h3>Add new transaction</h3>
+    <h3>Adicionar nova transação</h3>
     <form>
         <div className="form-control">
-          <label>Title</label>
+          <label>Título</label>
           <input htmlFor="text"
            type="text" required placeholder="Enter text..."
            value={title}
            onChange={(e) => {setTitle(e.target.value)}} />
         </div>
         <div className="form-control">
-          <label>Amount <br/>(negative - expense, positive - income)</label>
+          <label>Quantia <br/>(negativo = gasto | positivo = receita)</label>
           <input htmlFor="amount"
            type="number" required placeholder="Enter amount..."
            value={amount}
