@@ -4,8 +4,15 @@ import { Balance } from './components/Balance'
 import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionList } from './components/TransactionList'
 import { AddTransaction } from './components/AddTransaction'
+import { useState } from 'react'
 
 function App() {  
+  const [dataFromUser, setDataFromUser] = useState({})
+
+  const getData = (data) => {
+    setDataFromUser(data)
+  } 
+  
   return (
     <div>
       <Header/>
@@ -13,7 +20,8 @@ function App() {
         <Balance/>
         <IncomeExpenses/>
         <TransactionList/>
-        <AddTransaction/>
+        <AddTransaction
+        sendData={getData}/>
       </div>
     </div>
   );

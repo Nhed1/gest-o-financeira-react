@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export const AddTransaction = () => {
+export const AddTransaction = (props) => {
     const [title, setTitle] = useState('')
     const [amount, setAmount] = useState(0)
 
@@ -22,7 +22,11 @@ export const AddTransaction = () => {
            value={amount}
            onChange={(e) => {setAmount(e.target.value)}} />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn"
+        onClick={(e) => {
+          props.sendData({title, amount})
+          e.preventDefault()
+        }}>Add transaction</button>
     </form>
     </>
     )
