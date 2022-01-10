@@ -21,7 +21,7 @@ export const AddTransaction = (props) => {
           <input htmlFor="amount"
            type="number" required placeholder="Enter amount..."
            value={amount}
-           onChange={(e) => {setAmount(e.target.value)}} />
+           onChange={(e) => {setAmount(parseInt(e.target.value))}} />
         </div>
         <button className="btn"
         onClick={(e) => {

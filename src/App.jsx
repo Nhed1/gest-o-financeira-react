@@ -20,7 +20,7 @@ function App() {
 
   function handleTotal(){
     if (dataFromUser.amount){
-      setTotal( prevCount => prevCount + parseInt(dataFromUser.amount));
+      setTotal( prevCount => prevCount + dataFromUser.amount);
     }
   }
 
@@ -34,11 +34,13 @@ function App() {
       <div className="container">
         <Balance
         total={total}/>
-        <IncomeExpenses/>
-        <TransactionList
-        data={allData}/>
+        <IncomeExpenses
+        data={dataFromUser}/>
         <AddTransaction
         sendData={getData}/>
+        <TransactionList
+        data={allData}/>
+        
       </div>
     </div>
   );
