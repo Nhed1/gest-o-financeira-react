@@ -5,24 +5,35 @@ import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionList } from './components/TransactionList'
 import { AddTransaction } from './components/AddTransaction'
 import { useState } from 'react'
+import { useEffect } from 'react/cjs/react.development'
 
 function App() {  
   const [dataFromUser, setDataFromUser] = useState({})
   const [allData, setAllData] = useState([])
+  const [total, setTotal] = useState(0)
 
   const getData = (data) => {
     setDataFromUser(() => data)
 
     setAllData(prevState => [...prevState , data])
-    console.log(dataFromUser)
   } 
-  
+
+  function handleTotal(){
+    if (dataFromUser.amount){
+      setTotal( prevCount => prevCount + parseInt(dataFromUser.amount));
+    }
+  }
+
+  useEffect(() => {
+    handleTotal()
+  }, [dataFromUser])
+
   return (
     <div>
-
       <Header/>
       <div className="container">
-        <Balance/>
+        <Balance
+        total={total}/>
         <IncomeExpenses/>
         <TransactionList
         data={allData}/>

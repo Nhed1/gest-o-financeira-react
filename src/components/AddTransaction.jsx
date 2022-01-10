@@ -12,22 +12,23 @@ export const AddTransaction = (props) => {
         <div className="form-control">
           <label>Title</label>
           <input htmlFor="text"
-           type="text" placeholder="Enter text..."
+           type="text" required placeholder="Enter text..."
            value={title}
            onChange={(e) => {setTitle(e.target.value)}} />
         </div>
         <div className="form-control">
           <label>Amount <br/>(negative - expense, positive - income)</label>
           <input htmlFor="amount"
-           type="number" placeholder="Enter amount..."
+           type="number" required placeholder="Enter amount..."
            value={amount}
            onChange={(e) => {setAmount(e.target.value)}} />
         </div>
         <button className="btn"
         onClick={(e) => {
+          if (title && amount){
           setKey((prevState) => prevState+=1)
           props.sendData({title, amount, key})
-          e.preventDefault()
+          e.preventDefault()}
         }}>Add transaction</button>
     </form>
     </>

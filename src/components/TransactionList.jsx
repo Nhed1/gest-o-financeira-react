@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const TransactionList = (props) => {
-    console.log(props.data)
     return (
         <>
     <h3>History</h3>
@@ -13,9 +12,6 @@ export const TransactionList = (props) => {
             return <li className='minus' key={eachData.key}>{eachData.title} <span>{`-R$${eachData.amount*-1}`}</span></li>
         }
     })}
-        <li className="minus">
-            Cash <span>-$400</span><button className="delete-btn">x</button>
-        </li>  
     </ul>
         </>
     )
