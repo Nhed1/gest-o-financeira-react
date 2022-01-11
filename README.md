@@ -8,4 +8,4 @@ Com essa aplicação você pode monitorar seus gastos financeiro
 
 Projeto pessoal desenvolvido para aprofundar os conhecimentos aprendidos em ReactJs
 
-<img src='./ProjetoPrint.png'>
+<img src='./ProjetoSC.png'>
