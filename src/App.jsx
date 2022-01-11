@@ -4,8 +4,8 @@ import { Balance } from './components/Balance'
 import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionList } from './components/TransactionList'
 import { AddTransaction } from './components/AddTransaction'
-import { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { useState,useEffect } from 'react'
+// import {  } from 'react/cjs/react.development'
 
 function App() {  
   const [dataFromUser, setDataFromUser] = useState({})

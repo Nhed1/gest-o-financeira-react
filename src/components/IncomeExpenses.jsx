@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import React, { useState, useEffect } from 'react'
+// import { useEffect } from 'react/cjs/react.development'
 // import { useState } from 'react'
 
 export const IncomeExpenses = ({data}) => {
     const [income, setIncome] = useState(0)
     const [expense, setExpense] = useState(0)
-    console.log(data)
 
     function handleExpense(){
       if (data.amount < 0){
